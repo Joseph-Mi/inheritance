@@ -27,11 +27,11 @@ private:
     float x1, y1;
     float x2, y2;
     float x3, y3;
+    float x_centre, y_centre;
 
 public:
     //constr
-    Triangle(string n, float xcent, float ycent,
-                       float x1, float y1, 
+    Triangle(string n, float x1, float y1, 
                        float x2, float y2, 
                        float x3, float y3);
     
@@ -53,6 +53,10 @@ public:
     void setY2(float y2);
     void setX3(float x3);
     void setY3(float y3);
+
+    //center sinve we dont have
+    float getXCentre() const;
+    float getYCentre() const;
 
     // Virtual methods to override from Shape base class
     virtual void draw() const;

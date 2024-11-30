@@ -121,11 +121,11 @@ Shape* parseRectangleCommand(stringstream& line) {
 
 Shape* parseTriangleCommand(stringstream& line) {
     string name;
-    float xcent;
-    float ycent;
+    float x_center;
+    float y_center;
     float x1, x2, x3;
     float y1, y2, y3;
-    line >> name >> xcent >> ycent >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
+    line >> name >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
 
     // Do a simple error check
     if (line.fail()) {
@@ -145,8 +145,8 @@ Shape* parseTriangleCommand(stringstream& line) {
         return nullptr;
     }
 
-        // Create the shape object and return a pointer to it
-    Shape* myShape = (Shape*) new Triangle(name, xcent, ycent, x1, y1, x2, y2, x3, y3);
+    // Create the shape object and return a pointer to it
+    Shape* myShape = (Shape*) new Triangle(name, x1, y1, x2, y2, x3, y3);
     cout << "created triangle" << endl;
     return myShape;
 }

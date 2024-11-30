@@ -54,7 +54,7 @@ void Rectangle::draw() const {
     cout << std::setprecision(2);
     
     // Print the information
-    cout << "Rectangle: " << name << " "
+    cout << "rectangle: " << name << " "
          << x_centre << " " << y_centre
          << " " << width << " " << height 
          << " " << computeArea()
